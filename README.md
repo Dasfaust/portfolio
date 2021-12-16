@@ -24,10 +24,12 @@ collections:
 		github: text
 ```
 
-Clone the repo
-`git clone https://github.com/Dasfaust/dasfaust.me.git`
+### Prerequisites
+Must have Node 17 or later and `npm` installed 
 
-Change the Strapi URL in `next.config.js`
-
-Run!
+Clone the repo  
+`git clone https://github.com/Dasfaust/dasfaust.me.git`  
+Change the Strapi URL in  
+`next.config.js`  
+Run!  
 `npm run [dev, start]`
