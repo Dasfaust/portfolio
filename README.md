@@ -1,7 +1,7 @@
 ### dasfaust.me
 The source code to my personal website
 
-Uses Next.js/React to build pages with data served by Strapi. Also uses MDXRemote to allow React components insite an article. Theming is done with TailwindCSS.
+Uses Next.js/React to build pages with data served by Strapi. Uses MDXRemote to allow React components inside an article. Theming is done with TailwindCSS along with Font Awesome icons.
 
 ### Running
 Uses a default install of Strapi 4.0.0, which is not included in this repo. The Strapi content types look like this:
