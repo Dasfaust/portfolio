@@ -19,8 +19,6 @@ export const getServerSideProps = async(context) =>
 	}
 	if (projectsByTag.data != null)
 	{
-		projectsByTag.data.attributes.projects;
-
 		for (var i = 0; i < projectsByTag.data.attributes.projects.data.length; i++)
 		{
 			if (projectsByTag.data.attributes.projects.data[i].attributes.publishedAt != null)
