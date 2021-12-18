@@ -7,27 +7,24 @@ import TagScroller from "../components/TagScroller";
 export const getServerSideProps = async(context) =>
 {
 	const tagsRes = await fetch(`${process.env.strapiRoute}/api/tags?filters[verb][$notNull]=true&pagination[pageSize]=100`);
-	var _tags = await tagsRes.json();
+	var tagsWithVerb = await tagsRes.json();
 
-	var emptyTags = [];
-	for (var i = 0; i < _tags.data.length; i++)
+	var _tags = {
+		data: []
+	}
+	for (var i = 0; i < tagsWithVerb.data.length; i++)
 	{
-		if (_tags.data[i].attributes.verb.length == 0)
+		if (tagsWithVerb.data[i].attributes.verb.length > 0)
 		{
-			emptyTags.push(i);
+			_tags.data.push(tagsWithVerb.data[i]);
 		}
 	}
-
-	emptyTags.map((index) => {
-		_tags.data.splice(index, 1);
-	});
 
 	for (var i = _tags.data.length - 1; i > 0; i--)
 	{
 		const rand = Math.floor(Math.random() * (i + 1));
 		[_tags.data[i], _tags.data[rand]] = [_tags.data[rand], _tags.data[i]];
 	}
-
 	const tags = _tags;
 
 	const projectsRes = await fetch(`${process.env.strapiRoute}/api/projects?sort=updatedAt:desc&pagination[pageSize]=4&populate=tags,cover`);

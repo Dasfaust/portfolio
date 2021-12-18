@@ -19,7 +19,15 @@ export const getServerSideProps = async(context) =>
 	}
 	if (projectsByTag.data != null)
 	{
-		projects = projectsByTag.data.attributes.projects;
+		projectsByTag.data.attributes.projects;
+
+		for (var i = 0; i < projectsByTag.data.attributes.projects.data.length; i++)
+		{
+			if (projectsByTag.data.attributes.projects.data[i].attributes.publishedAt != null)
+			{
+				projects.data.push(projectsByTag.data.attributes.projects.data[i]);
+			}
+		}
 	}
 
 	let currentTagName = "Unknown Tag";
