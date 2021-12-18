@@ -32,4 +32,4 @@ Clone the repo
 Change the Strapi URL in  
 `next.config.js`  
 Run!  
-`npm run [dev, start]`
+`npm run dev`
