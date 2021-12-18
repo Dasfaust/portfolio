@@ -12,7 +12,7 @@ const Navigation = () =>
 						<a className="my-auto" href="/"><FontAwesomeIcon icon={faBookOpen} className="text-3xl" /></a>
 						<a className="hover:underline hover:underline-offset-4 hover:decoration-4 my-auto" href="/projects">Projects</a>
 						<div className="flex flex-row gap-x-4 self-end ml-auto my-auto">
-							<a href="https://github.com/Dasfaust/"><FontAwesomeIcon icon={faGithub} className="text-3xl" /></a>
+							<a href="https://github.com/Dasfaust/" target="_blank"><FontAwesomeIcon icon={faGithub} className="text-3xl" /></a>
 						</div>
 					</li>
 				</ul>

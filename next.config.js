@@ -3,7 +3,8 @@
  */
 const nextConfig = {
 	env: {
-		strapiRoute: 'https://strapi.dasfaust.me',
+		strapiRoute: "https://strapi.dasfaust.me",
+		contactEmail: "das@dasfaust.me"
 	}
 }
 
