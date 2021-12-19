@@ -5,10 +5,10 @@ const Meta = ({title, keywords, image, description}) =>
 	return (
 		<Head>
 			<title>{title}</title>
-			<meta property="og:title" content={title} />
+			<meta id="meta-title" property="og:title" content={title} />
 			<meta name="keywords" content={keywords.toString()} />
-			<meta property="og:image" content={image} />
-			<meta property="og:description" content={description} />
+			<meta id="meta-image" property="og:image" content={image} />
+			<meta id="meta-descr" property="og:description" content={description} />
 		</Head>
 	);
 };

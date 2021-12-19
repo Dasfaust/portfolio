@@ -7,7 +7,6 @@ const Layout = ({children}) =>
 {
 	return (
 		<div className="text-stone-900 flex flex-col h-screen">
-			<Meta />
 			<Navigation />
 			<HeaderProvider>
 				<Header />

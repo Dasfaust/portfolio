@@ -3,6 +3,7 @@ import {HeaderContext} from "../components/Header";
 import RecentPostCard from "../components/RecentPostCard";
 import NoPostsWarning from "../components/NoPostsWarning";
 import TagScroller from "../components/TagScroller";
+import Meta from "../components/Meta";
 
 export const getServerSideProps = async(context) =>
 {
@@ -54,27 +55,26 @@ function Home({tags, projects})
 	}, []);
 
 	return (
-		<>
-			<div className="flex flex-col space-y-3">
-				<div className="rounded-sm border shadow-sm mx-auto p-2 flex flex-row gap-4 bg-gray-100 border-gray-200  w-[320px] lg:w-[544px]">
-					<img className="w-12 h-12 rounded-full my-auto" src="profile.jpg"></img>
-					<p className="my-auto">My name is Cody, and I am a <TagScroller tags={tags} /></p>
-				</div>
+		<div className="flex flex-col space-y-3">
+			<Meta />
+			<div className="rounded-sm border shadow-sm mx-auto p-2 flex flex-row gap-4 bg-gray-100 border-gray-200  w-[320px] lg:w-[544px]">
+				<img className="w-12 h-12 rounded-full my-auto" src="profile.jpg"></img>
+				<p className="my-auto">My name is Cody, and I am a <TagScroller tags={tags} /></p>
+			</div>
 
-				<div>
-					<p className="italic">Recent Posts:</p>
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-auto">
+			<div>
+				<p className="italic">Recent Posts:</p>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-auto">
 
-					{projects.data.length == 0 &&
-					<NoPostsWarning />}
+				{projects.data.length == 0 &&
+				<NoPostsWarning />}
 
-					{projects.data.map((project) => {
-						return <RecentPostCard project={project} />
-					})}
-					</div>
+				{projects.data.map((project) => {
+					return <RecentPostCard project={project} />
+				})}
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 
