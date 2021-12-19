@@ -75,11 +75,11 @@ function Project({project, content, tagNames})
 
 			{project.data != null &&
 			<>
-				<Meta title={project.data.attributes.title} keywords={[...Meta.defaultProps.keywords, ...tagNames, ...projectTitle.split(" "), "project"]} />
+				<Meta title={project.data.attributes.title} keywords={[...Meta.defaultProps.keywords, ...tagNames, ...projectTitle.split(" "), "project"]} image={`${process.env.strapiRoute}${project.data.attributes.cover.data.attributes.url}`} description={project.data.attributes.blurb} />
 
 				<div className="grid grid-cols-4 gap-1 rounded-sm border shadow-sm w-11/12 mx-auto bg-gray-100 border-gray-200">
 					<div className="col-span-1 md:max-h-24">
-						<img className="object-cover rounded-l-sm w-full h-full" src={`https://strapi.dasfaust.me${project.data.attributes.cover.data.attributes.url}`}></img>
+						<img className="object-cover rounded-l-sm w-full h-full" src={`${process.env.strapiRoute}${project.data.attributes.cover.data.attributes.url}`}></img>
 					</div>
 					<div className="col-span-3 my-auto md:max-h-24 p-2">{project.data.attributes.blurb}</div>
 				</div>

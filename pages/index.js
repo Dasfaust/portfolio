@@ -56,9 +56,9 @@ function Home({tags, projects})
 	return (
 		<>
 			<div className="flex flex-col space-y-3">
-				<div className="rounded-sm border shadow-sm w-fit mx-auto p-2 flex flex-row gap-4 bg-gray-100 border-gray-200">
-					<img className="w-24 h-24 rounded-full my-auto" src="profile.jpg"></img>
-					<p className="my-auto">Hi, I go by <span className="italic">Dasfaust</span>, and I am a <TagScroller tags={tags} /><br />I dabble in all kinds of projects (and even finish some of them!)</p>
+				<div className="rounded-sm border shadow-sm mx-auto p-2 flex flex-row gap-4 bg-gray-100 border-gray-200  w-[320px] lg:w-[544px]">
+					<img className="w-12 h-12 rounded-full my-auto" src="profile.jpg"></img>
+					<p className="my-auto">My name is Cody, and I am a <TagScroller tags={tags} /></p>
 				</div>
 
 				<div>
