@@ -32,7 +32,7 @@ Meta.defaultProps = {
 		"portfolio"
 	],
 	image: "https://dasfaust.me/profile.jpg",
-	description: "Discover projects raging from web development to game development"
+	description: "Discover projects ranging from web development to game development"
 };
 
 export default Meta;
