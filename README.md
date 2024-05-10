@@ -1,4 +1,4 @@
-### dasfaust.me
+### Portfolio
 The source code to my personal website
 
 Uses Next.js/React to build pages with data served by Strapi. Uses MDXRemote to allow React components inside an article. Theming is done with TailwindCSS along with Font Awesome icons.
